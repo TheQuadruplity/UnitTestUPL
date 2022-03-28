@@ -1,7 +1,7 @@
 package informatika.barang;
 
 public class Barang {
-    static final String[][] arrayBarang = {
+    static String[][] arrayBarang = {
         {"Buku Gambar", "3", "Buku", "5000"},
         {"Pensil", "4", "ATK", "2500"},
         {"Baju", "2", "Busana", "75000"},
@@ -16,6 +16,34 @@ public class Barang {
 
     static int length(){
         return Barang.arrayBarang.length;
+    }
+
+    static void addBarang(String nama, String stok, String jenis, String harga){
+        int l = Barang.length();
+        String[][] a = new String[l+1][];
+        for(int i = 0; i < l; i++){
+            a[i] = Barang.arrayBarang[i];
+        }
+        a[l][0] = nama;
+        a[l][1] = stok;
+        a[l][2] = jenis;
+        a[l][3] = harga;
+
+        Barang.arrayBarang = a;
+    }
+
+    static void addBarang(Barang barang){
+        int l = Barang.length();
+        String[][] a = new String[l+1][4];
+        for(int i = 0; i < l; i++){
+            a[i] = Barang.arrayBarang[i];
+        }
+        a[l][0] = barang.getNama();
+        a[l][1] = String.valueOf(barang.getStok());
+        a[l][2] = barang.getJenis();
+        a[l][3] = String.valueOf(barang.getHarga());
+
+        Barang.arrayBarang = a;
     }
 
     public Barang(int id){
