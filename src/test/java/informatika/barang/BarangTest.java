@@ -14,7 +14,7 @@ class BarangTest {
 	void test() {
 		// a. Testing Length of an Array
 		int actual = Barang.length();
-		int expected = 4;
+		int expected = 6;
 		assertEquals(expected, actual);
 		
 		// b. Testing Array properties

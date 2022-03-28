@@ -2,8 +2,10 @@ package informatika.barang;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
 class BarangMasukTest {
 
@@ -28,8 +30,22 @@ class BarangMasukTest {
 	}
 	
 	@Test
-	void testInputScanner() {
-		BarangMasuk bm = new BarangMasuk();
-		bm.inputBarang();
+	@DisplayName("Testing Keberadaan Error via AssertThrows")
+	void testInputThrow() {
+		Barang.addBarang("Pesawat", "lima", "Kendaraan", "satu miliar lima ratus juta");
+        assertThrows(NumberFormatException.class, new Executable() {
+            public void execute() throws Throwable {
+                int len = Barang.length()-1;
+                Barang b = new Barang(len);
+            }
+        });
+        
+        Barang.addBarang("Pesawat", "lima", "Kendaraan", "1500000000");
+        assertThrows(NumberFormatException.class, new Executable() {
+            public void execute() throws Throwable {
+                int len = Barang.length()-1;
+                Barang b = new Barang(len);
+            }
+        });
 	}
 }

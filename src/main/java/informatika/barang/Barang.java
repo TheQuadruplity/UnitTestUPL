@@ -1,6 +1,7 @@
 package informatika.barang;
 
 public class Barang {
+	// Deklarasi statis ArrayBarang
     static String[][] arrayBarang = {
         {"Buku Gambar", "3", "Buku", "5000"},
         {"Pensil", "4", "ATK", "2500"},
@@ -8,16 +9,19 @@ public class Barang {
         {"Sepeda", "2", "Kendaraan", "1000000"}
     };
 
+    // Deklarasi Atribut
     private int id;
     private String nama;
     private int stok;
     private String jenis;
     private int harga;
 
+    // Method Static
     static int length(){
         return Barang.arrayBarang.length;
     }
 
+    // Deklarasi Method
     static void addBarang(String nama, String stok, String jenis, String harga){
         int l = Barang.length();
         String[][] a = new String[l+1][4];
@@ -32,6 +36,7 @@ public class Barang {
         Barang.arrayBarang = a;
     }
 
+    // Deklarasi Overloading Method
     static void addBarang(Barang barang){
         int l = Barang.length();
         String[][] a = new String[l+1][4];
@@ -46,6 +51,7 @@ public class Barang {
         Barang.arrayBarang = a;
     }
 
+    // Deklarasi Constructor
     public Barang(int id){
         this.id = id;
         this.nama = Barang.arrayBarang[id][0];
@@ -54,6 +60,7 @@ public class Barang {
         this.harga = Integer.parseInt(Barang.arrayBarang[id][3]);
     }
 
+    // Berbagai Setter dan Getter
     public int getId() {
         return id;
     }

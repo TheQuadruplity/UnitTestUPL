@@ -17,6 +17,7 @@ public class BarangMasuk {
         Barang.addBarang(nama, stok, jenis, harga);
     }
 
+    // Overloading Method
     public void inputBarang(String nama, int stok, String jenis, int harga){
         Barang.addBarang(nama, String.valueOf(stok), jenis, String.valueOf(harga));
     }
