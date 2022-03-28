@@ -16,4 +16,8 @@ public class BarangMasuk {
         int harga = this.S.nextInt();
         Barang.addBarang(nama, String.valueOf(stok), jenis, String.valueOf(harga));
     }
+
+    public void inputBarang(String nama, int stok, String jenis, int harga){
+        Barang.addBarang(nama, String.valueOf(stok), jenis, String.valueOf(harga));
+    }
 }
