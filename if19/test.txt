@@ -1,1 +1,0 @@
-/* kalimat testing fetch data untuk git */
