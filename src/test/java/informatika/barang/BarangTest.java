@@ -2,6 +2,7 @@ package informatika.barang;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import informatika.barang.Barang;
@@ -9,6 +10,7 @@ import informatika.barang.Barang;
 class BarangTest {
 
 	@Test
+	@DisplayName("Testing Kesesuaian Array dg Objeknya")
 	void test() {
 		// a. Testing Length of an Array
 		int actual = Barang.length();
