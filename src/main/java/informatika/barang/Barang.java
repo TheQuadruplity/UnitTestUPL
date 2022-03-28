@@ -20,7 +20,7 @@ public class Barang {
 
     static void addBarang(String nama, String stok, String jenis, String harga){
         int l = Barang.length();
-        String[][] a = new String[l+1][];
+        String[][] a = new String[l+1][4];
         for(int i = 0; i < l; i++){
             a[i] = Barang.arrayBarang[i];
         }
