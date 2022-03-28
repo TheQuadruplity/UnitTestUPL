@@ -1,6 +1,6 @@
 package informatika.testing;
 
-public class Test {
+public class Testing {
     public String test(){
         return "test";
     }
