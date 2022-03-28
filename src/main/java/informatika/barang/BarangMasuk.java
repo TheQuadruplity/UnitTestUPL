@@ -11,10 +11,10 @@ public class BarangMasuk {
 
     public void inputBarang(){
         String nama = this.S.nextLine();
-        int stok = this.S.nextInt();
+        String stok = this.S.nextLine();
         String jenis = this.S.nextLine();
-        int harga = this.S.nextInt();
-        Barang.addBarang(nama, String.valueOf(stok), jenis, String.valueOf(harga));
+        String harga = this.S.nextLine();
+        Barang.addBarang(nama, stok, jenis, harga);
     }
 
     public void inputBarang(String nama, int stok, String jenis, int harga){
