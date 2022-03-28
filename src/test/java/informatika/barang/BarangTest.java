@@ -10,16 +10,21 @@ class BarangTest {
 
 	@Test
 	void test() {
-//		fail("Not yet implemented");
-		// arrange
-		Barang barang = new Barang();
-		
-		// set
-		String actual = barang.testBarang();
-		String expected = "BRRRIIIHHH";
-		
-		// assert
+		// a. Testing Length of an Array
+		int actual = Barang.length();
+		int expected = 4;
 		assertEquals(expected, actual);
+		
+		// b. Testing Array properties
+		int l = Barang.length();
+		for(int i = 0; i<l; i++) {
+			Barang b = new Barang(i);
+			assertEquals(i, b.getId());
+			assertEquals(Barang.arrayBarang[i][0], b.getNama());
+			assertEquals(Integer.parseInt(Barang.arrayBarang[i][1]), b.getStok());
+			assertEquals(Barang.arrayBarang[i][2], b.getJenis());
+			assertEquals(Integer.parseInt(Barang.arrayBarang[i][3]), b.getHarga());
+		}
 	}
 
 }
